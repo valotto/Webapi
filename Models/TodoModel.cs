@@ -1,12 +1,18 @@
+
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace webapi.Models
 {
-public class Obj
+    public class TodoModel
     {
+        //TodoId
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public ObjectId ObjetId { get; set; }
+        [BsonRequired]
+
         public string Tamanho { get; set; }
         public string Sabor { get; set; }
         public string Personalizacao { get; set; }
@@ -14,5 +20,5 @@ public class Obj
         public DateTime Tempo_preparo { get; set; }
 
     }
-
 }
+
