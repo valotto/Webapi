@@ -4,8 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - WebApplication1</title>
-
-
     <!-- Start CSS-->
     <environment include="Development">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -15,17 +13,10 @@
 
 </head>
 <body>
-
-
-
     <!-- Start NAV-->
     <nav class="light-blue lighten-1" role="navigation">
         <div class="nav-wrapper container">
             <a asp-page="/Index" class="navbar-brand">WebApplication1</a>
-
-
-
-
 
             <!-- Start NAV DESK-->
             <ul class="right hide-on-med-and-down">
@@ -33,10 +24,6 @@
                 <li><a asp-page="/About">About</a></li>
                 <li><a asp-page="/Contact">Contact</a></li>
             </ul>
-
-
-
-
 
             <!-- Start NAV MOBILE-->
             <ul id="nav-mobile" class="sidenav">
@@ -48,12 +35,6 @@
         </div>
     </nav>
 
-
-
-
-
-
-
     <!-- Start Body-->
  
     <div class="container">
@@ -63,13 +44,6 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
     <!-- Start Footer-->
     <footer class="page-footer orange">
         <div class="container">
@@ -84,13 +58,6 @@
         </div>
     </footer>
 
-
-
-
-
-
-
-
     <!-- Start js-->
     <environment include="Development">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -104,8 +71,5 @@
         <script src="~/js/init.js" asp-append-version="true"></script>
     </environment>
     @RenderSection("Scripts", required: false)
-
-
-
 </body>
 </html>
