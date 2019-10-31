@@ -17,7 +17,7 @@ namespace webapi.Models
         public string Sabor { get; set; }
         public string Personalizacao { get; set; }
         public decimal Valor_total { get; set; }
-        public DateTime Tempo_preparo { get; set; }
+        public string Tempo_preparo { get; set; }
 
     }
 }
