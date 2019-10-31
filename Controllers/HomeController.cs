@@ -23,7 +23,7 @@ namespace webapi.Controllers
         [Route("Listar")]
         public async Task<JsonResult> Get()
         {
-            var mongodbService = new mongoDbServices("test", "Dados", "mongodb+srv://admin:010203@clustervalotto-c9rs6.mongodb.net/test");
+            var mongodbService = new mongoDbServices("pizzauds", "mongouds", "mongodb://mongouds:Jw30tpPIPe_-@den1.mongo1.gear.host:27001/?authSource=mongouds");
             var allTodos = await mongodbService.GetAllTodos();       
             return Json(allTodos);
             

@@ -13,10 +13,9 @@ namespace webapi.Services
 
         public mongoDbServices(string databasesName, string collectionName, string databaseUrl)
         {
-
             //mongodb://mongouds:Jw30tpPIPe_-@den1.mongo1.gear.host:27001/?authSource=mongouds
-           IMongoClient client = new MongoClient("mongodb+srv://admin:010203@clustervalotto-c9rs6.mongodb.net/test");
-           IMongoDatabase database = client.GetDatabase("test");
+           IMongoClient client = new MongoClient("mongodb://mongouds:Jw30tpPIPe_-@den1.mongo1.gear.host:27001/?authSource=mongouds");
+           IMongoDatabase database = client.GetDatabase("mongouds");
            TodoCollection = database.GetCollection<TodoModel>(collectionName);
         }
         // Lista todos os dados da Base
