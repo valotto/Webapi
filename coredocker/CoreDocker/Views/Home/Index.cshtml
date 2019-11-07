@@ -1,0 +1,158 @@
+﻿@model CoreDocker.Models.TodoModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<br>
+<br>
+<h1 class="header center orange-text">Pizzaria UDS</h1>
+<div class="row center">
+    <h5 class="header col s12 light">
+        Temos a pizza ideal de acordo com o seu gosto! O nosso objetivo de saciar a sua fome em um bom tempo de preparo. E claro, que caiba no seu bolso.
+    </h5>
+</div>
+
+<!-- Modal Trigger -->
+<div class="row center">
+    <!-- Modal Trigger -->
+    <a href="#modal1" id="download-button" data-tooltip="Selecione as opções para realizar o Pedido" data-position="bottom" class="btn-large waves-effect waves-light orange btn modal-trigger tooltipped">Fazer Pedido</a>
+</div>
+
+<br>
+<br>
+<!-- Modal Structure -->
+<div id="modal1" class="modal modal-fixed-footer">
+    <div class="modal-content">
+
+        <div class="row center">
+            <h5 class="header col s12 light">
+                <h1 class="header center orange-text">Realizar Pedido</h1>
+            </h5>
+        </div>
+        <hr />
+        <div class="row center">
+
+            <div class="col s12">
+
+                <span class="title"><b style="color:red">MESA Nº</b></span>
+                <br /><br />
+            </div>
+            <div class="col s12 m4 l2">
+                <p></p>
+            </div>
+
+            <div class="col s12 m4 l8">
+                <select id="mesa" tabindex="-1">
+                    <option value="" disabled="" selected="">Numero da Mesa</option>
+                    <option value="mesa10">Mesa 10</option>
+                    <option value="mesa19">Mesa 19</option>
+                    <option value="mesa17">Mesa 17</option>
+                </select>
+            </div>
+
+            <div class="col s12">
+                <span class="title"><b style="color:red">TAMANHO DA PIZZA</b></span>
+                <br /><br />
+            </div>
+            <div class="col s12 m4 l2">
+                <p></p>
+            </div>
+
+            <div class="col s12 m4 l8">
+                <select id="tapizza" tabindex="-1">
+                    <option value="" disabled="" selected="">TAMANHO DA PIZZA</option>
+                    <option value="15" data-icon="../img/pequena.png" class="left">Pequena - 6 Fatias</option>
+                    <option value="20" data-icon="../img/media.png" class="left">Média - 8 Fatias</option>
+                    <option value="25" data-icon="../img/grande.png" class="left">Grande - 10 Fatias</option>
+                </select>
+            </div>
+
+            <div class="col s12">
+                <span class="title"><b style="color:red">SABOR PIZZA</b></span>
+                <br /><br />
+            </div>
+            <div class="col s12 m4 l2">
+                <p></p>
+            </div>
+
+            <div class="col s12 m4 l8">
+                <select id="sapizza" tabindex="-1">
+                    <option value="" disabled="" selected="">SABOR DA PIZZA</option>
+                    <option value="sc" data-icon="../img/calabresa.jpg" class="left">Calabresa</option>
+                    <option value="sm" data-icon="../img/marguerita.jpg" class="left">Marguerita</option>
+                    <option value="sp" data-icon="../img/portuguesa.jpg" class="left">Portuguesa</option>
+                </select>
+            </div>
+
+            <div class="col s12">
+                <span class="title"><b>Selecione a Personalização da Pizza</b></span>
+                <br /><br />
+            </div>
+            <div class="col s12 m4 l2">
+                <p></p>
+            </div>
+
+            <div class="col s12 m4 l8">
+                <select id="perpizza" tabindex="-1">
+                    <option value="" disabled="" selected="">Personalização da Pizza</option>
+                    <option value="eb" data-icon="../img/bacon.jpg" class="left">Extra bacon</option>
+                    <option value="sce">Sem cebola</option>
+                    <option value="br" data-icon="../img/borda.jpg" class="left">Borda recheada</option>
+                    <option value="ebbr" data-icon="../img/bacon+borda.jpg" class="left">Borda recheada + Extra bacon</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="row center">
+        <div class="modal-footer">
+            <button class="modal-close btn waves-effect waves-light" type="button" name="button" onclick="calcular()">
+                Confirmar Pedido
+                <i class="material-icons right">check</i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<ul class="table-of-contents">
+
+    <li><a class="active">Pedido Completo: <br /></a></li>
+    <br />
+    <br />
+    <h6><b> <span id="resultado" style="visibility:hidden"></span></b></h6>
+    <br />
+    <br />
+    <li><a class="active">Sabor:   <span id="sabor2" style="visibility:hidden"></span>  </a></li>
+    <li><a class="active">Tamanho:   <span id="tamanho2" style="visibility:hidden"></span>  </a></li>
+    <li><a class="active">Personalizada:   <span id="personalizada" style="visibility:hidden"></span>  </a></li>
+    <li><a class="active">Tempo aproximado :   <span id="timepizza2" style="visibility:hidden"></span>  </a></li>
+    <li><a class="active">Valor Final:   <span id="valorfinal2" style="visibility:hidden"></span>  </a></li>
+    <span id="valorfinal3" style="visibility:hidden"></span>
+    <br />
+    <br />
+    <li><a class="active">Horario do pedido: <p id="dtpedio"></p><br /></a> </li>
+    <li><a class="active">Entrega Aproximada : <p id="dtpedio2"></p><br /></a> </li>
+
+</ul>
+
+@using (Html.BeginForm(FormMethod.Post))
+{
+    @Html.AntiForgeryToken();
+
+    <button class="btn waves-effect waves-light" style="visibility:hidden" id="btnpede" value="index" type="submit">
+        Confirmar Pedido
+        <i class="material-icons right">check</i>
+    </button>
+
+    @Html.TextBoxFor(m => m.Personalizacao, new { style = "visibility:hidden" })
+    @Html.TextBoxFor(m => m.Tamanho, new { style = "visibility:hidden" })
+    @Html.TextBoxFor(m => m.Sabor, new { style = "visibility:hidden" })
+    @Html.TextBoxFor(m => m.Valor_total, new { style = "visibility:hidden" })
+    @Html.TextBoxFor(m => m.Tempo_preparo, new { style = "visibility:hidden" })
+
+}
+<environment include="Development">
+    <script src="~/js/script.js" asp-append-version="true"></script>
+</environment>
+

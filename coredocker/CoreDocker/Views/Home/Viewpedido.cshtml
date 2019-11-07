@@ -1,0 +1,30 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row center" style="visibility:@ViewBag.noty">
+    <div class="col s12 m6">
+      <div class="card">
+        <div class="card-image">
+          <img src="https://img.stpu.com.br/?img=https://s3.amazonaws.com/pu-mgr/default/a0RG000000mVBkwMAG/5ca20980e4b04178b72d966a.jpg&w=710&h=462">
+          <span class="card-title">Detalhe do Pedido</span>
+          <a class="btn-floating halfway-fab waves-effect waves-light red" href="/"><i class="material-icons">add</i></a>
+        </div>
+        <div class="card-content">
+          
+                   <div id="root"></div>
+<h6 ><b ><span style="color:#23de20">@ViewBag.detalhes</span></b>
+<h6 >Sabor: <b ><span id="dt1" style="color:#f31010"></span></b>
+<h6 >Personalização: <b ><span id="per1" style="color:#f31010"></span></b>
+<h6 >Tamanho: <b ><span id="tam1" style="color:#f31010"></span></b>
+<h6 >Valor: <b style="color:#f31010">R$ <span id="val1"></span>,00</b>
+<h6 >Tempo de preparo: <b ><span id="tmp1" style="color:#f31010"></span></b>
+<h6 >Data do Pedido: <b ><span style="color:#f31010">@DateTime.Now</span></b>
+
+        </div>
+      </div>
+    </div>
+  </div>
+<environment include="Development">
+    <script src="~/js/scriptconsulta.js" asp-append-version="true"></script>
+</environment>

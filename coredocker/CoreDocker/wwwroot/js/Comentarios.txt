@@ -1,0 +1,84 @@
+﻿function calcular() {
+
+        var tapizza = document.getElementById("tapizza").value;
+        var sapizza = document.getElementById("sapizza").value;
+        var perpizza = document.getElementById("perpizza").value;
+        var mesa = document.getElementById("mesa").value;
+        var personalizacao;
+        
+
+        var tempo; var sabor; var valor; var pertempo; var pervalor; var sabor2; var tamanho2; var timepizza2; var valorfinal2; var valorfinal3;
+        var tamanho; var t;
+
+        if (tapizza == "15") valor = 20,t = 1, tamanho = "Pequena" ; if (tapizza == "20") valor = 30, tamanho = "Média"; if (tapizza == "25") valor = 40, tamanho = "Grande";
+        if (mesa == "mesa10") mesa = 10; if (mesa == "mesa19") mesa = 19; if (mesa == "mesa17") mesa = 17; if (mesa == "") mesa = "";
+        if (sapizza == "sp") tempo = 5, sabor = "Portuguesa"; else if (sapizza == "sm") tempo = 0, sabor = "Marguerita"; else if (sapizza == "sc") tempo = 0, sabor = "Calabresa";
+        if (perpizza == "eb") pervalor = 3, pertempo = 0, personalizacao = "Extra Bacon"; else if (perpizza == "sce") pervalor = 0, pertempo = 0, personalizacao = "Sem cebola"; else if (perpizza == "br") pervalor = 5, pertempo = 5, personalizacao = "Borda Recheada"; else if (perpizza == "ebbr") pervalor = 8, pertempo = 5, personalizacao = "Extra Bacon + Borda Recheada"; if (perpizza == "") pervalor = 0, pertempo = 0, personalizacao = "";
+
+        var resultado2 = parseInt(tapizza) + parseInt(tempo) + parseInt(pertempo);
+        var valorfinal = parseInt(valor) + parseInt(pervalor);
+
+
+
+
+        if (tapizza == "15") resultado = "Seu pedido está em andamento. Pizza de " + sabor + ". Tamanho: Pequena. Vai estar pronta em " + resultado2 + "Min" + " , Valor Final de : R$" + valorfinal + ",00.    Mesa:" + mesa;
+        if (tapizza == "20") resultado = "Seu pedido está em andamento. Pizza de " + sabor + ". Tamanho: Média. Vai estar pronta em " + resultado2 + "Min" + " , Valor Final de : R$" + valorfinal + ",00.    Mesa:" + mesa;
+        if (tapizza == "25") resultado = "Seu pedido está em andamento. Pizza de " + sabor + ". Tamanho: Grande. Vai estar pronta em " + resultado2 + "Min" + " , Valor Final de : R$" + valorfinal + ",00.   Mesa:" + mesa;
+
+        if (sapizza == "") resultado = "Ops selecione o tamanho da pizza ", tapizza = "", valorfinal = 0, tempo = 0, sabor = "", tamanho = "";
+        if (tapizza == "") resultado = "Ops selecione o sabor da pizza ", tapizza = "", valorfinal = 0, tempo = 0, sabor = "", tamanho = "";
+
+        sabor2 = sabor + ".";
+        personalizada = personalizacao + ".";
+        tamanho2 = tamanho + ".";
+        timepizza2 = resultado2 + "Min" + ".";
+        valorfinal2 = "R$" + valorfinal + ", 00. Mesa: " + mesa;
+        valorfinal3 = valorfinal;
+
+
+        document.getElementById("resultado").innerHTML = resultado;
+        document.getElementById("sabor2").innerHTML = sabor2;
+        document.getElementById("personalizada").innerHTML = personalizacao;
+        document.getElementById("tamanho2").innerHTML = tamanho2;
+        document.getElementById("timepizza2").innerHTML = timepizza2;
+        document.getElementById("valorfinal2").innerHTML = valorfinal2;
+        document.getElementById("valorfinal3").innerHTML = valorfinal3;
+
+        document.getElementById("resultado").style.visibility = "visible";
+        document.getElementById("sabor2").style.visibility = "visible";
+        document.getElementById("personalizada").style.visibility = "visible";
+        document.getElementById("tamanho2").style.visibility = "visible";
+        document.getElementById("timepizza2").style.visibility = "visible";
+        document.getElementById("valorfinal2").style.visibility = "visible";
+
+        document.getElementById("btnpede").style.visibility = "visible";
+
+        
+     
+
+
+        var d = new Date().toLocaleString(); document.getElementById("dtpedio").innerHTML = d;
+        var dt = new Date(); dt.setMinutes(dt.getMinutes() + resultado2); document.getElementById("dtpedio2").innerHTML = dt.toLocaleString();
+
+
+
+        var f1 = document.getElementById("personalizada").innerHTML;
+        document.getElementById("Personalizacao").value = f1;
+
+        var f2 = document.getElementById("tamanho2").innerHTML;
+        document.getElementById("Tamanho").value = f2;
+
+        var f3 = document.getElementById("sabor2").innerHTML;
+        document.getElementById("Sabor").value = f3;
+
+        var f4 = document.getElementById("valorfinal3").innerHTML;
+        document.getElementById("Valor_total").value = f4;
+
+        var f5 = document.getElementById("timepizza2").innerHTML;
+        document.getElementById("Tempo_preparo").value = f5;
+
+
+
+
+
+    }
