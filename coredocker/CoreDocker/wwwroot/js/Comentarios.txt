@@ -77,6 +77,8 @@
         var f5 = document.getElementById("timepizza2").innerHTML;
         document.getElementById("Tempo_preparo").value = f5;
 
+       var f6 = mesa;
+        document.getElementById("Mesa_register").value = f6;
 
 
 

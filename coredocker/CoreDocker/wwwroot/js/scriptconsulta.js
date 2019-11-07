@@ -28,7 +28,7 @@ function _defineProperty(obj, key, value) {if (key in obj) {Object.definePropert
       error ? React.createElement("p", null, error.message) : null,
       !isLoading ?
       pedido.map(pedidos => {
-        const { objetId, tamanho, sabor,personalizacao,valor_total,tempo_preparo } = pedidos;
+        const { objetId, tamanho, sabor,personalizacao,valor_total,tempo_preparo, mesa_register } = pedidos;
         return (
             React.createElement("div", { key: objetId },
 
@@ -37,12 +37,9 @@ function _defineProperty(obj, key, value) {if (key in obj) {Object.definePropert
           React.createElement(document.getElementById("tam1").innerHTML = tamanho),
           React.createElement(document.getElementById("val1").innerHTML = valor_total),
           React.createElement(document.getElementById("tmp1").innerHTML = tempo_preparo),
+          React.createElement(document.getElementById("ms1").innerHTML = mesa_register),
          
-
-
-      
           React.createElement("hr", null)));
-
 
       }) :
 

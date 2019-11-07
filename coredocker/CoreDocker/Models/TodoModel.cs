@@ -19,6 +19,7 @@ namespace CoreDocker.Models
         public string Personalizacao { get; set; }
         public decimal Valor_total { get; set; }
         public string Tempo_preparo { get; set; }
+        public string Mesa_register { get; set; }
       
     }
 }

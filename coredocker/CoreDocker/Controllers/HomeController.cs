@@ -17,24 +17,20 @@ namespace CoreDocker.Controllers
         TodoModel sm = new TodoModel();
 
         public IActionResult Index(string Personalizacao, string Tamanho, 
-            string Sabor, decimal Valor_total, string Tempo_preparo)
+            string Sabor, decimal Valor_total, string Tempo_preparo, string Mesa_register)
         {
             
              //ViewBag.noty = "hidden"; 
 
             if (Valor_total != 0 && Tempo_preparo != null)
             {                 
-               
-               //ViewBag.pedido = "disabled";
-               //ViewBag.pedido2 = "disabled";
-               //ViewBag.noty = "visible";
-               //ViewBag.detalhes = "Pedido Realizado com sucesso! ";
-               
+                             
                sm.Personalizacao = Personalizacao;
                sm.Tamanho = Tamanho;
                sm.Sabor = Sabor;
                sm.Valor_total = Valor_total;
                sm.Tempo_preparo = Tempo_preparo;
+               sm.Mesa_register = Mesa_register;
 
 
                 var mongodbService = new MongodbServices("mongouds", "pizzauds", "mongodb://mongouds:Jw30tpPIPe_-@den1.mongo1.gear.host:27001/?authSource=mongouds");
