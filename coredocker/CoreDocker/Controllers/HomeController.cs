@@ -12,9 +12,12 @@ using CoreDocker.Services;
 namespace CoreDocker.Controllers
 {
     public class HomeController : Controller
-    {    
-     
+    {
+
         TodoModel sm = new TodoModel();
+        private readonly MongodbServices _Mdbs;
+
+        public HomeController(MongodbServices Mdbs) { _Mdbs = Mdbs;  }
 
         public IActionResult Index(string Personalizacao, string Tamanho, 
             string Sabor, decimal Valor_total, string Tempo_preparo, string Mesa_register)
@@ -23,18 +26,19 @@ namespace CoreDocker.Controllers
              //ViewBag.noty = "hidden"; 
 
             if (Valor_total != 0 && Tempo_preparo != null)
-            {                 
-                             
-               sm.Personalizacao = Personalizacao;
-               sm.Tamanho = Tamanho;
-               sm.Sabor = Sabor;
-               sm.Valor_total = Valor_total;
-               sm.Tempo_preparo = Tempo_preparo;
-               sm.Mesa_register = Mesa_register;
+            {
+
+                sm.Personalizacao = Personalizacao;
+                sm.Tamanho = Tamanho;
+                sm.Sabor = Sabor;
+                sm.Valor_total = Valor_total;
+                sm.Tempo_preparo = Tempo_preparo;
+                sm.Mesa_register = Mesa_register;
+
+                //Insert
+                _Mdbs.Create(sm);
 
 
-                var mongodbService = new MongodbServices("mongouds", "pizzauds", "mongodb://mongouds:Jw30tpPIPe_-@den1.mongo1.gear.host:27001/?authSource=mongouds");
-                mongodbService.InsertTodo(sm);
                 ModelState.Clear(); //lIMPAR O FORMULARIO. 
 
                  
@@ -44,18 +48,13 @@ namespace CoreDocker.Controllers
             return View();
         }
 
-        // GET: api/<controller>
+
+
         [HttpGet]
         [AcceptVerbs("GET")]
         [Route("Listar")]
-        public async Task<JsonResult> Get()
-        {
-            var mongodbService = new MongodbServices("mongouds", "pizzauds", "mongodb://mongouds:Jw30tpPIPe_-@den1.mongo1.gear.host:27001/?authSource=mongouds");
-            var allTodos = await mongodbService.GetAllTodos();
-            
-            return Json(allTodos);
+        public ActionResult<List<TodoModel>> Get() => _Mdbs.Get();
 
-        }
 
         public IActionResult Viewpedido()
         {

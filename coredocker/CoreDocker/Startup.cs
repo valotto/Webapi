@@ -1,13 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using CoreDocker.Models;
+using Microsoft.Extensions.Options;
+using CoreDocker.Services;
 
 namespace CoreDocker
 {
@@ -23,6 +21,16 @@ namespace CoreDocker
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // requires using Microsoft.Extensions.Options
+            //A instância de configuração à qual a seção , arquivo appsettings.json
+            services.Configure<PizzastoreDatabaseSettings>(
+           Configuration.GetSection(nameof(PizzastoreDatabaseSettings)));
+
+            services.AddSingleton<IPizzastoreDatabaseSettings>(sp =>
+                sp.GetRequiredService<IOptions<PizzastoreDatabaseSettings>>().Value);
+
+            services.AddSingleton<MongodbServices>();
+
             services.AddControllersWithViews();
         }
 

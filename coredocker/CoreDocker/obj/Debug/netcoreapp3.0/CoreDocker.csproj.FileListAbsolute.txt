@@ -77,7 +77,6 @@ C:\Users\Lucas\Projetogit\webapi\CoreDocker\CoreDocker\bin\Debug\netcoreapp3.0\S
 C:\Users\Lucas\Projetogit\webapi\CoreDocker\CoreDocker\obj\Debug\netcoreapp3.0\CoreDocker.csprojAssemblyReference.cache
 C:\Users\Lucas\Projetogit\webapi\CoreDocker\CoreDocker\obj\Debug\netcoreapp3.0\staticwebassets\CoreDocker.StaticWebAssets.Manifest.cache
 C:\Users\Lucas\Projetogit\webapi\CoreDocker\CoreDocker\obj\Debug\netcoreapp3.0\staticwebassets\CoreDocker.StaticWebAssets.xml
-C:\Users\Lucas\Projetogit\webapi\CoreDocker\CoreDocker\obj\Debug\netcoreapp3.0\CoreDocker.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Lucas\Projetogit\webapi\CoreDocker\CoreDocker\obj\Debug\netcoreapp3.0\CoreDocker.RazorAssemblyInfo.cache
 C:\Users\Lucas\Projetogit\webapi\CoreDocker\CoreDocker\obj\Debug\netcoreapp3.0\CoreDocker.RazorAssemblyInfo.cs
 C:\Users\Lucas\Projetogit\webapi\CoreDocker\CoreDocker\obj\Debug\netcoreapp3.0\CoreDocker.AssemblyInfoInputs.cache
@@ -86,6 +85,7 @@ C:\Users\Lucas\Projetogit\webapi\CoreDocker\CoreDocker\obj\Debug\netcoreapp3.0\C
 C:\Users\Lucas\Projetogit\webapi\CoreDocker\CoreDocker\obj\Debug\netcoreapp3.0\CoreDocker.TagHelpers.output.cache
 C:\Users\Lucas\Projetogit\webapi\CoreDocker\CoreDocker\obj\Debug\netcoreapp3.0\CoreDocker.RazorCoreGenerate.cache
 C:\Users\Lucas\Projetogit\webapi\CoreDocker\CoreDocker\obj\Debug\netcoreapp3.0\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\Lucas\Projetogit\webapi\CoreDocker\CoreDocker\obj\Debug\netcoreapp3.0\Razor\Views\Home\Viewpedido.cshtml.g.cs
 C:\Users\Lucas\Projetogit\webapi\CoreDocker\CoreDocker\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\Lucas\Projetogit\webapi\CoreDocker\CoreDocker\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\Lucas\Projetogit\webapi\CoreDocker\CoreDocker\obj\Debug\netcoreapp3.0\Razor\Views\_ViewImports.cshtml.g.cs
@@ -96,4 +96,6 @@ C:\Users\Lucas\Projetogit\webapi\CoreDocker\CoreDocker\obj\Debug\netcoreapp3.0\C
 C:\Users\Lucas\Projetogit\webapi\CoreDocker\CoreDocker\obj\Debug\netcoreapp3.0\CoreDocker.csproj.CopyComplete
 C:\Users\Lucas\Projetogit\webapi\CoreDocker\CoreDocker\obj\Debug\netcoreapp3.0\CoreDocker.dll
 C:\Users\Lucas\Projetogit\webapi\CoreDocker\CoreDocker\obj\Debug\netcoreapp3.0\CoreDocker.pdb
-C:\Users\Lucas\Projetogit\webapi\CoreDocker\CoreDocker\obj\Debug\netcoreapp3.0\Razor\Views\Home\Viewpedido.cshtml.g.cs
+C:\Users\Lucas\Projetogit\webapi\CoreDocker\CoreDocker\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Lucas\Projetogit\webapi\CoreDocker\CoreDocker\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Lucas\Projetogit\webapi\CoreDocker\CoreDocker\obj\Debug\netcoreapp3.0\CoreDocker.MvcApplicationPartsAssemblyInfo.cache

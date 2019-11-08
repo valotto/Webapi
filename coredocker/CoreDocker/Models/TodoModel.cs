@@ -1,5 +1,6 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,8 +13,10 @@ namespace CoreDocker.Models
         //TodoId
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public ObjectId ObjetId { get; set; }
         [BsonRequired]
+        [BsonElement("ObjetId")]
+        public ObjectId ObjetId { get; set; }
+        
         public string Tamanho { get; set; }
         public string Sabor { get; set; }
         public string Personalizacao { get; set; }

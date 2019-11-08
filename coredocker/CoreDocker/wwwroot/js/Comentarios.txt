@@ -50,6 +50,8 @@
         document.getElementById("tamanho2").style.visibility = "visible";
         document.getElementById("timepizza2").style.visibility = "visible";
         document.getElementById("valorfinal2").style.visibility = "visible";
+        document.getElementById("progress").style.visibility = "visible";
+        
 
         document.getElementById("btnpede").style.visibility = "visible";
 

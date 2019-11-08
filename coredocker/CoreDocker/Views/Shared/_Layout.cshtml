@@ -54,6 +54,10 @@
 
 
 
+
+
+
+
     <!-- Start Footer-->
     <footer class="page-footer orange">
         <div class="container">
@@ -67,8 +71,7 @@
             </div>
         </div>
     </footer>
-
-    <!-- Start js-->
+ <!-- Start js-->
     <environment include="Development">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
                 asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
@@ -80,7 +83,7 @@
         <script src="~/js/materialize.min.js" asp-append-version="true"></script>
         <script src="~/js/init.js" asp-append-version="true"></script>
     </environment>
-    @RenderSection("Scripts", required: false)
+    @RenderSection("Scripts", required: false)  
 
 </body>
 </html>
