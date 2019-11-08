@@ -31,12 +31,11 @@ namespace CoreDocker.Controllers
                 sm.Mesa_register = Mesa_register;
 
                 //Insert
-                _Mdbs.Create(sm);
-
-
+                try  { _Mdbs.Create(sm);}
+                catch{ ViewBag.erro = "Tente novamente em poucos minutos.";}
+                
                 ModelState.Clear(); //lIMPAR O FORMULARIO. 
-
-                 
+                
                 Response.Redirect(Url.Action("Viewpedido", "Home"));
             }
             
@@ -58,8 +57,6 @@ namespace CoreDocker.Controllers
          return View();
 
         }
-
-
 
     }//End class
 }
