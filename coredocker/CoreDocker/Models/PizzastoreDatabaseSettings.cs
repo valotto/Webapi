@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace CoreDocker.Models
+﻿namespace CoreDocker.Models
 {
         public class PizzastoreDatabaseSettings : IPizzastoreDatabaseSettings
         {

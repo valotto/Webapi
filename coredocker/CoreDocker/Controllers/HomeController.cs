@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using CoreDocker.Models;
 using CoreDocker.Services;
 
@@ -58,7 +53,6 @@ namespace CoreDocker.Controllers
 
         public IActionResult Viewpedido()
         {
-
          ViewBag.noty = "visible";
          ViewBag.detalhes = "Pedido Realizado com sucesso! ";
          return View();
