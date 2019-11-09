@@ -6,7 +6,7 @@ function _defineProperty(obj, key, value) {if (key in obj) {Object.definePropert
 
 
   fetchUsers() {
-      fetch(`https://localhost:50001/listar`).
+      fetch(`https://localhost:5001/listar`).
     then(response => response.json()).
     then((data) =>
     this.setState({

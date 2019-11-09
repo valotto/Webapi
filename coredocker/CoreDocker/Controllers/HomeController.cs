@@ -3,12 +3,10 @@ using Microsoft.AspNetCore.Mvc;
 using CoreDocker.Models;
 using CoreDocker.Services;
 
-
 namespace CoreDocker.Controllers
 {
     public class HomeController : Controller
     {
-
         TodoModel sm = new TodoModel();
         private readonly MongodbServices _Mdbs;
 

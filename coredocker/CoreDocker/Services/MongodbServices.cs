@@ -13,10 +13,10 @@ namespace CoreDocker.Services
             var client = new MongoClient(settings.ConnectionString);
             var database = client.GetDatabase(settings.DatabaseName);
 
-            TodoCollection = database.GetCollection<TodoModel>(settings.BooksCollectionName);
+            TodoCollection = database.GetCollection<TodoModel>(settings.PizzaCollectionName);
         }
 
-        public List<TodoModel> Get() =>TodoCollection.Find(FilterDefinition<TodoModel>.Empty).Limit(1).Sort("{_id : -1}").ToList();
+        public List<TodoModel> Get() => TodoCollection.Find(FilterDefinition<TodoModel>.Empty).Limit(1).Sort("{_id : -1}").ToList();
 
         public TodoModel Create(TodoModel pedido)
         {

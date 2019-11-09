@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lucas\\Projetogit\\webapi\\CoreDocker\\CoreDocker\\CoreDocker.csproj": {}
+    "C:\\Users\\Lucas\\projetogit\\webapi\\coredocker\\coredocker\\CoreDocker.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lucas\\Projetogit\\webapi\\CoreDocker\\CoreDocker\\CoreDocker.csproj": {
+    "C:\\Users\\Lucas\\projetogit\\webapi\\coredocker\\coredocker\\CoreDocker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lucas\\Projetogit\\webapi\\CoreDocker\\CoreDocker\\CoreDocker.csproj",
+        "projectUniqueName": "C:\\Users\\Lucas\\projetogit\\webapi\\coredocker\\coredocker\\CoreDocker.csproj",
         "projectName": "CoreDocker",
-        "projectPath": "C:\\Users\\Lucas\\Projetogit\\webapi\\CoreDocker\\CoreDocker\\CoreDocker.csproj",
+        "projectPath": "C:\\Users\\Lucas\\projetogit\\webapi\\coredocker\\coredocker\\CoreDocker.csproj",
         "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lucas\\Projetogit\\webapi\\CoreDocker\\CoreDocker\\obj\\",
+        "outputPath": "C:\\Users\\Lucas\\projetogit\\webapi\\coredocker\\coredocker\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
