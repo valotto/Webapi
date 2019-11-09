@@ -18,7 +18,7 @@ namespace CoreDocker.Controllers
             
              //ViewBag.noty = "hidden"; 
 
-            if (Valor_total != 0 && Tempo_preparo != null)
+            if (Valor_total != 0 && Tempo_preparo != null && Mesa_register != null)
             {
 
                 sm.Personalizacao = Personalizacao;
