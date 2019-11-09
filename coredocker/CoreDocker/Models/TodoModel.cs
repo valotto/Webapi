@@ -9,6 +9,7 @@ namespace CoreDocker.Models
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         [BsonRequired]
+        
         [BsonElement("ObjetId")]
         public ObjectId ObjetId { get; set; }
         

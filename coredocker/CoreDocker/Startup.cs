@@ -22,15 +22,16 @@ namespace CoreDocker
         public void ConfigureServices(IServiceCollection services)
         {
             // requires using Microsoft.Extensions.Options
-            //A instância de configuração à qual a seção , arquivo appsettings.json
+            //A instï¿½ncia de configuraï¿½ï¿½o ï¿½ qual a seï¿½ï¿½o , arquivo appsettings.json
             services.Configure<PizzastoreDatabaseSettings>(
            Configuration.GetSection(nameof(PizzastoreDatabaseSettings)));
-
+            
             services.AddSingleton<IPizzastoreDatabaseSettings>(sp =>
                 sp.GetRequiredService<IOptions<PizzastoreDatabaseSettings>>().Value);
 
             services.AddSingleton<MongodbServices>();
 
+            //WithViews pois tem o Visual 
             services.AddControllersWithViews();
         }
 
