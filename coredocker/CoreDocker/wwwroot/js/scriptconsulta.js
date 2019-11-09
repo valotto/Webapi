@@ -3,8 +3,7 @@ function _defineProperty(obj, key, value) {if (key in obj) {Object.definePropert
       isLoading: true,
       pedido: [],
       error: null });}
-
-
+      
   fetchUsers() {
       fetch(`https://localhost:5001/listar`).
     then(response => response.json()).
@@ -45,10 +44,6 @@ function _defineProperty(obj, key, value) {if (key in obj) {Object.definePropert
 
       React.createElement("h3", null, "Listando DB...")));
 
-
-
   }}
-
-
 
 ReactDOM.render(React.createElement(App, null), document.getElementById("root"));

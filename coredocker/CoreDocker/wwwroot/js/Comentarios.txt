@@ -11,7 +11,7 @@
         var tamanho; var t;
 
         if (tapizza == "15") valor = 20,t = 1, tamanho = "Pequena" ; if (tapizza == "20") valor = 30, tamanho = "Média"; if (tapizza == "25") valor = 40, tamanho = "Grande";
-        if (mesa == "mesa10") mesa = 10; if (mesa == "mesa19") mesa = 19; if (mesa == "mesa17") mesa = 17; if (mesa == "") mesa = "";
+        if (mesa == "mesa10") mesa = 10; if (mesa == "mesa19") mesa = 19; if (mesa == "mesa17") mesa = 17; if (mesa == "") mesa = "Ops selecione a Mesa";
         if (sapizza == "sp") tempo = 5, sabor = "Portuguesa"; else if (sapizza == "sm") tempo = 0, sabor = "Marguerita"; else if (sapizza == "sc") tempo = 0, sabor = "Calabresa";
         if (perpizza == "eb") pervalor = 3, pertempo = 0, personalizacao = "Extra Bacon"; else if (perpizza == "sce") pervalor = 0, pertempo = 0, personalizacao = "Sem cebola"; else if (perpizza == "br") pervalor = 5, pertempo = 5, personalizacao = "Borda Recheada"; else if (perpizza == "ebbr") pervalor = 8, pertempo = 5, personalizacao = "Extra Bacon + Borda Recheada"; if (perpizza == "") pervalor = 0, pertempo = 0, personalizacao = "";
 

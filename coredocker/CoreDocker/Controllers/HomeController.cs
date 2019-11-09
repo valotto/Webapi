@@ -9,15 +9,10 @@ namespace CoreDocker.Controllers
     {
         TodoModel sm = new TodoModel();
         private readonly MongodbServices _Mdbs;
-
         public HomeController(MongodbServices Mdbs) { _Mdbs = Mdbs;  }
-
         public IActionResult Index(string Personalizacao, string Tamanho, 
             string Sabor, decimal Valor_total, string Tempo_preparo, string Mesa_register)
         {
-            
-             //ViewBag.noty = "hidden"; 
-
             if (Valor_total != 0 && Tempo_preparo != null && Mesa_register != null)
             {
 
@@ -40,20 +35,16 @@ namespace CoreDocker.Controllers
             return View();
         }
 
-
-
         [HttpGet]
         [AcceptVerbs("GET")]
-        [Route("Listar")]
+        [Route("listar")]
         public ActionResult<List<TodoModel>> Get() => _Mdbs.Get();
-
 
         public IActionResult Viewpedido()
         {
          ViewBag.noty = "visible";
          ViewBag.detalhes = "Pedido Realizado com sucesso! ";
          return View();
-
         }
 
     }//End class
