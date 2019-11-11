@@ -86,3 +86,6 @@
 
 
     }
+
+
+//mongodb://mongouds:Jw30tpPIPe_-@den1.mongo1.gear.host:27001/?authSource=mongouds
